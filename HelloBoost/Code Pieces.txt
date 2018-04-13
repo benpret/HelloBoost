@@ -1,0 +1,14 @@
+//Check Paths
+	check_path("foo");
+	check_path(argv[0]);
+
+	auto dir = path(argv[0]).parent_path();
+	check_path(dir.string().c_str());
+
+
+	// decomposition (Break file names down to individual elements
+	for (auto& child : dir)
+	{
+		cout << child << endl;
+	}
+
